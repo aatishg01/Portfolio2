@@ -77,81 +77,77 @@
                     </div>
                 </div>
 
-                <div class="work__box">
-                    <div class="work__text">
-                        <h3>Finite Difference Solver for Modeling Shielding Gas Flow and Build Chamber Temperature in Metal Additive Manufacturing</h3>
-                        <h4>Introduction</h4>
-                        <p>Laser Powder Bed Fusion (LPBF) is an additive manufacturing process that requires optimized inert gas flow inside the build chamber. The flow serves multiple purposes: removing oxygen, carrying away spatter particles, and convecting heat. For my final project in Computational Fluid Dynamics, my team and I created a finite difference solver to model the effects of varying inlet and outlet positions of the inert shielding gas flow on chamber temperature and gas velocity in a LPBF machine.</p>
-                        <h4>Design</h4>
-                        <p>A 2D CFD (Computational Fluid Dynamics) solver was developed using the Finite Difference Method to solve the incompressible conservative Navier-Stokes Equation.</p>
-                        <p>The solver used</p>
-                        <ul>
-                            <li>A 0.4m x 0.4m 2D grid</li>
-                            <li>Fractional Step Method with Picard linearization</li>
-                            <li>Staggered grid for velocity and collocated grid for temperature</li>
-                            <li>Blended-scheme of second order for Temperature Advection-Diffusion</li>
-                            <li>Modified physical properties of Argon for stability</li>
-                        </ul>
-                        <p>Boundary conditions included:</p>
-                        <ul>
-                            <li>Inlet velocity of 4 m/s</li>
-                            <li>Outlet pressure set to ambient</li>
-                            <li>No-slip conditions on walls</li>
-                            <li>Specific temperature conditions for inlet, build plate, and melt point</li>
-                        </ul>
-                        <h4>Experiment</h4>
-                        <p>The study was conducted in two phases:</p>
-                        <ol>
-                            <li>Preliminary analysis:
-                                <ul>
-                                    <li>20 x 20 mesh grid</li>
-                                    <li>16 cases with varying inlet and outlet positions</li>
-                                </ul>
-                            </li>
-                            <li>Final analysis:
-                                <ul>
-                                    <li>40 x 40 mesh grid</li>
-                                    <li>Focused on cases around the best configuration from preliminary analysis</li>
-                                </ul>
-                            </li>
-                        </ol>
-                        <p>Goal metrics included:</p>
-                        <ul>
-                            <li>Average gas speed over the build plate (minimum 2 m/s)</li>
-                            <li>Mean temperature in the build area</li>
-                            <li>A scoring system combining speed and temperature</li>
-                        </ul>
-                        <h4>Conclusion</h4>
-                        <p>The optimal configuration found was:</p>
-                        <ul>
-                            <li>Inlet height: 0.0 - 0.1 m (flush with bottom of chamber)</li>
-                            <li>Outlet height: 0.3 - 0.4 m (near top of chamber)</li>
-                        </ul>
-                        <p>This configuration provides the best balance between:</p>
-                        <ul>
-                            <li>Fast gas flow over the build plate to carry away spatter particles</li>
-                            <li>High temperature to prevent residual stresses in the AM part</li>
-                        </ul>
-                        <p>Limitations of the study include:</p>
-                        <ul>
-                            <li>Lack of eddy currents due to modified viscosity</li>
-                            <li>Simplified single inlet/outlet configuration</li>
-                            <li>Static melt point position</li>
-                        </ul>
-                        <p>Future work suggestions include:</p>
-                        <ul>
-                            <li>Using higher compute power to model true Argon properties</li>
-                            <li>Exploring multiple inlet/outlet configurations</li>
-                            <li>Considering dispersed inlets</li>
-                        </ul>
-                        <p>Our report provided insights for optimizing LPBF machine design, particularly in positioning inert gas inlets and outlets for improved build quality. We learned a great deal about finite difference methods to solve ODEs for practical applications, and about parallelizing programming tasks for advanced computational modeling.</p>
-                    </div>
-                    <div class="work__image-box">
-                        <img src="https://github.com/aatishg01/Portfolio/blob/main/Schematic(4).png?raw=true" alt="LPBF Schematic" width="945" height="735">
-                        <img src="https://github.com/aatishg01/Portfolio/blob/main/Streamlines_3_0.png?raw=true" alt="Streamlines" width="640" height="480">
-                        <img src="https://github.com/aatishg01/Portfolio/blob/main/TemperatureContours_3_0.png?raw=true" alt="Temperature Contours" width="640" height="480">
-                    </div>
-                </div>
+               <div class="work__box">
+<div class="work__text">
+<h3>Finite Difference Solver for Modeling Shielding Gas Flow and Build Chamber Temperature in Metal Additive Manufacturing</h3>
+<h3>Introduction</h3>
+<p>Laser Powder Bed Fusion (LPBF) is an additive manufacturing process that requires optimized inert gas flow inside the build chamber. The flow serves multiple purposes: removing oxygen, carrying away spatter particles, and convecting heat. For my final project in Computational Fluid Dynamics, my team and I created a finite difference solver to model the effects of varying inlet and outlet positions of the inert shielding gas flow on chamber temperature and gas velocity in a LPBF machine.</p>
+<h3>Design</h3>
+<p>A 2D CFD (Computational Fluid Dynamics) solver was developed using the Finite Difference Method to solve the incompressible conservative Navier-Stokes Equation.</p>
+<p>The solver used</p>
+<ul>
+<li>A 0.4m x 0.4m 2D grid</li>
+<li>Fractional Step Method with Picard linearization</li>
+<li>Staggered grid for velocity and collocated grid for temperature</li>
+<li>Blended-scheme of second order for Temperature Advection-Diffusion</li>
+<li>Modified physical properties of Argon for stability</li>
+</ul>
+<p>Boundary conditions included:</p>
+<ul>
+<li>Inlet velocity of 4 m/s</li>
+<li>Outlet pressure set to ambient</li>
+<li>No-slip conditions on walls</li>
+<li>Specific temperature conditions for inlet, build plate, and melt point</li>
+</ul>
+<h3>Experiment</h3>
+<p>The study was conducted in two phases:</p>
+<ol>
+<li>Preliminary analysis:
+<ul>
+<li>20 x 20 mesh grid</li>
+<li>16 cases with varying inlet and outlet positions</li>
+</ul>
+</li>
+<li>Final analysis:
+<ul>
+<li>40 x 40 mesh grid</li>
+<li>Focused on cases around the best configuration from preliminary analysis</li>
+</ul>
+</li>
+</ol>
+<p>Goal metrics included:</p>
+<ul>
+<li>Average gas speed over the build plate (minimum 2 m/s)</li>
+<li>Mean temperature in the build area</li>
+<li>A scoring system combining speed and temperature</li>
+</ul>
+<h3>Conclusion</h3>
+<p>The optimal configuration found was:</p>
+<ul>
+<li>Inlet height: 0.0 - 0.1 m (flush with bottom of chamber)</li>
+<li>Outlet height: 0.3 - 0.4 m (near top of chamber)</li>
+</ul>
+<p>This configuration provides the best balance between:</p>
+<ul>
+<li>Fast gas flow over the build plate to carry away spatter particles</li>
+<li>High temperature to prevent residual stresses in the AM part</li>
+</ul>
+<p>Limitations of the study include:</p>
+<ul>
+<li>Lack of eddy currents due to modified viscosity</li>
+<li>Simplified single inlet/outlet configuration</li>
+<li>Static melt point position</li>
+</ul>
+<p>Future work suggestions include:</p>
+<ul>
+<li>Using higher compute power to model true Argon properties</li>
+<li>Exploring multiple inlet/outlet configurations</li>
+<li>Considering dispersed inlets</li>
+</ul>
+<p>Our report provided insights for optimizing LPBF machine design, particularly in positioning inert gas inlets and outlets for improved build quality. We learned a great deal about finite difference methods to solve ODEs for practical applications, and about parallelizing programming tasks for advanced computational modeling.</p>
+</div>
+<div class="work__image-box"><img src="https://github.com/aatishg01/Portfolio/blob/main/Schematic(4).png?raw=true" alt="LPBF Schematic" width="945" height="735" /> <img src="https://github.com/aatishg01/Portfolio/blob/main/Streamlines_3_0.png?raw=true" alt="Streamlines" width="640" height="480" /> <img src="https://github.com/aatishg01/Portfolio/blob/main/TemperatureContours_3_0.png?raw=true" alt="Temperature Contours" width="640" height="480" /></div>
+</div>
 
                 <div class="work__box">
                     <div class="work__text">
