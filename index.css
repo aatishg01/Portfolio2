@@ -179,7 +179,7 @@ p {
 
 @media(max-width: 900px) {
     p { 
-        max-width: var(--container-small-width);
+        max-width: var(--container-max-width);
     }
 }
 
