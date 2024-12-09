@@ -157,4 +157,25 @@
                     <div class="work__text">
                         <h3>MATLAB Modeling of Temperature Distribution Over a Planar Surface</h3>
                         <p>Personal Interest Project<br>February 2022</p>
+                        <h3>Introduction</h3>
+<p>I developed a method for plotting temperature distribution over a planar surface using MATLAB. I was inspired by a simple Excel-based approach shown in a heat transfer class, where cell temperatures were calculated as the average of surrounding cells. I decided to create a more complex MATLAB solution using simultaneous equations to get exact temperature values.</p>
+<h3>Design</h3>
+<p>The approach involved:</p>
+<ol>
+<li>Creating a matrix to represent the planar surface and boundary temperatures</li>
+<li>Constructing a solution matrix of simultaneous equations</li>
+<li>Solving the equations using reduced row echelon form (rref)</li>
+<li>Plotting the resulting temperature distribution</li>
+</ol>
+<h3>Key aspects of the design:</h3>
+<ul>
+<li>Uses constants C1, C2, C3 based on matrix size to construct equations</li>
+<li>Creates a repeating row pattern that is shifted to populate most of the solution matrix</li>
+<li>Handles edge cases for cells on the sides of the surface</li>
+<li>Appends boundary conditions to complete the solution matrix</li>
+</ul>
+<h3>Experiment</h3>
+<p>I implemented the method in MATLAB, testing it on 3x3, 5x5 and 20x20 surfaces.</p>
+<h3>Conclusion</h3>
+<p>The method successfully produces 3D surface plots of temperature distribution. I note that this is an elementary implementation that could be improved to: - Model 2D shapes other than squares - Extend to 3D shapes - Import and model temperature distribution on 3D files like STLs - Account for material properties The full MATLAB script is available on GitHub for further development.</p>
 
