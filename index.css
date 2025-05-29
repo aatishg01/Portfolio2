@@ -499,12 +499,43 @@ body:not(.user-is-tabbing) a:focus {
 
 .work__image-box {
     margin-bottom: var(--gutter-normal);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 1rem;
 }
 
-@media(min-width: 901px) {
-    .work__image-box {
-        flex: 1;
-        margin: 0 0 0 10rem;
+.project-figure {
+    margin: 0;
+    text-align: center;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.image-row {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.image-row .project-figure {
+    flex: 1;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .image-row {
+        flex-direction: column;
     }
 }
 
